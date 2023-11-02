@@ -23,7 +23,7 @@ body {
     position: fixed;
     width: 100%;
     height: 80px;
-    z-index: 3;
+    z-index: 5;
 }
 
 .header-row {
@@ -67,6 +67,7 @@ body {
     height: 100vh;
 }
 
+
 .p-1 {
     background-color: rgb(63, 63, 63);
     background-image: url(/image/banner.jpeg);
@@ -108,7 +109,7 @@ body {
 }
 
 .p-1 .page-row .left-side::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 0;
     height: 70%;
@@ -185,8 +186,74 @@ body {
     padding-bottom: 50px;
     background-image: url(/image/process.jpeg);
     background-size: cover;
+    position: relative;
 }
 
 .p-2 .slogan {
     color: #fff;
+}
+
+.p-2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.445);
+}
+
+.flow {
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+
+.item-circle {
+    --r: 50px;
+    width: var(--r);
+    height: var(--r);
+    border-radius: var(--r);
+    background-color: rgb(221, 34, 206);
+    z-index: 3;
+}
+
+.flow-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 4px;
+}
+
+.flow-item::after {
+    content: "";
+    width: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border: 2px dashed #fff;
+}
+
+.item-content {
+    position: absolute;
+    left: calc(50% + 50px);
+    padding: 20px;
+    background: #0f7b83;
+    color: #fff;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.item-content h2 {
+    margin-bottom: 15px;
+}
+
+.flow-item:nth-child(even) .item-content {
+    left: unset;
+    right: calc(50% + 50px);
+    text-align: right;
+
 }
