@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/animation.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="fn">
+            <button onclick="toggleBlock()">Block</button>
+            <button onclick="toggleBlock()">Block</button>
+        </div>
+        <div class="wrap">
+            <div class="block">
+                TEXT
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="wrap">
+            <div class="info-wrap">
+                <div class="info-item t1">
+                    AAAAA
+                </div>
+                <div class="info-item t2">
+                    BBBBB
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const blockEl = document.querySelector('.block');
+    function toggleBlock() {
+        if (blockEl.classList.contains('change-color')) {
+            blockEl.classList.remove('change-color');
+        } else {
+            blockEl.classList.add('change-color');
+        }
+    }
+</script>
+
+</html>
