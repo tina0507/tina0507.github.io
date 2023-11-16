@@ -1,17 +1,23 @@
 *,
 *::after,
-*::before{
+*::before {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-a {
-text-decoration:none ;
-color: inherit;
+
+html,
+body {
+    scroll-behavior: smooth;
 }
 
 ul {
-list-style-type: none;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .container {
