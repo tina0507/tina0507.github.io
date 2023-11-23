@@ -11,7 +11,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/css/resett.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/main.css">
 </head>
 
@@ -52,11 +56,7 @@
                     <img src="/image/banner.png" alt="">
                 </div>
                 <div class="product-information-text">
-                    <div>
-                        <ul class="category">
-                            <li>豐原小可愛</li>
-                        </ul>     
-                    <ul class="category-nav">                  
+                    <ul class="category-nav">
                         <li>
                             <a href="#">群眾募資</a>
                         </li>
@@ -64,30 +64,126 @@
                             <a href="#">設計</a>
                         </li>
                     </ul>
-                    <span>提案人</span>
-                    <span class="author-name">豐原小可愛</span>
+                    <div>
+                        <span>提案人</span>
+                        <span class="author-name">豐原小可愛</span>
+                    </div>
                     <h1 class="product-name">[S+ PURE Pro 第三代]</h1>
                     <div class="project-process">
                         <div>
                             <div class="goal-percentage">1,757%</div>
                         </div>
-                        <div>
+                        <div class="process-info">
                             <div class="project-goal">目標 NT$50,000</div>
-                            <div class="project-current">NT% 878,554</div>
+                            <div class="project-current">NT$ 878,554</div>
                             <div class="project-count">
-                                <div>
-                                    <span>icon</span>
+                                <div class="project-count-item">
+                                    <span>
+                                        <span class="material-symbols-outlined">person</span>
+                                    </span>
                                     <span>720 人</span>
                                 </div>
-                                <div>
-                                    <span>icon</span>
+                                <div class="project-count-item">
+                                    <span>
+                                        <span class="material-symbols-outlined">alarm_on</span>
+                                    </span>
                                     <span>2 天</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        S+寒風凜冽，但你卻能隨時隨地感受到溫暖。一杯，不僅僅是一個容器，更是一個溫馨的陪伴。保溫杯，宛如一位忠實的朋友，用它，你可以攜帶著溫暖，走過冰雪天。
+                    </div>
+                    <hr class="line">
+                    <div class="project-run-range">
+                        募資期間 2023/06/06 20:00 - 2023/07/26 23:59
+                    </div>
+                    <div class="share-item">
+                        <span>
+                            <a href="#" class="send-message">
+                                <span class="material-symbols-outlined">chat</span>
+                                <span>傳送訊息</span>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#">
+                                <img src="/image/facebook.png" alt="">
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#">
+                                <img src="/image/twitter.png" alt="">
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#">
+                                <img src="/image/line.png" alt="">
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#" class="copy-icon">
+                                <span class="material-symbols-outlined">content_copy</span>
+                            </a>
+                        </span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-nav-block">
+        <div class="container">
+            <div class="main-nav-wrap">
+                <div class="page-tab">
+                    <ul class="tabs">
+                        <li class="active">
+                            <a href="#">專案內容</a>
+                        </li>
+                        <li>
+                            <a href="#">專案更新</a>
+                        </li>
+                        <li>
+                            <a href="#">常見問題</a>
+                        </li>
+                        <li>
+                            <a href="#">留言</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="donate-wrap">
+                    <span class="like-btn">愛心</span>
+                    <span class="donate-btn">贊助專案</span>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
+<script>
+    let tabs = document.querySelector('.tabs');
+    tabs.addEventListener('click', (e) => {
+        e.preventDefault();
+        let el = e.target;
+
+        if (el.tagName == 'A') {
+            el = el.parentNode;
+        }
+
+        if (el.tagName == 'LI') {
+            resetTabsActive();
+            el.classList.add('active')
+        }
+    });
+
+    function resetTabsActive() {
+        let items = tabs.querySelectorAll('li');
+        items.forEach(el => {
+            el.classList.remove('active');
+        })
+    }
+</script>
+
+
 
 </html>
