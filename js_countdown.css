@@ -1,3 +1,7 @@
+body{
+    background: #000;
+}
+
 .cc {
     display: flex;
     align-items: center;
@@ -23,6 +27,8 @@
     position: relative;
     font-size: 5rem;
     font-weight: 1000;
+    text-shadow:#80babd 1px 1px 6px
+    
 }
 
 .countdown-unit {
